@@ -20,20 +20,20 @@ const columns = [
   {
     title: 'First',
     dataIndex: 'first_name',
-    sorter: sortText,
-    sortDirections: ['descend', 'ascend'],
+    // sorter: sortText,
+    // sortDirections: ['descend', 'ascend'],
   },
   {
     title: 'Last',
     dataIndex: 'last_name',
-    sorter: sortText,
-    sortDirections: ['descend', 'ascend'],
+    // sorter: sortText,
+    // sortDirections: ['descend', 'ascend'],
   },
   {
     title: 'Email',
     dataIndex: 'email',
-    sorter: sortText,
-    sortDirections: ['descend', 'ascend'],
+    // sorter: sortText,
+    // sortDirections: ['descend', 'ascend'],
   },
 ];
 
@@ -50,10 +50,11 @@ function TableComponent(props) {
       onChange={onChange}
       onRow={(record) => ({
         onClick: () => {
-          console.log(record);
+          props.onRowClicked(record)
         },
       })}
-      pagination={false} />
+      // pagination={false} 
+      />
   )
 }
 
