@@ -43,3 +43,19 @@
     margin: auto;
   }
 }
+
+.profile-header {
+  align-items: left;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.customer-details {
+  max-height: 25vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: space-between;
+}
