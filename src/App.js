@@ -1,6 +1,6 @@
-import React, {  useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-import { customers } from "./initial_json";
+import { getAllCustomers } from "./service";
 
 import TableComponent from "./TableComponent";
 import { Profile } from "./Profile";
@@ -25,11 +25,19 @@ const columns = [
 ];
 
 function App() {
-  const [customerSelected, setCustomerSelected] = useState();
   const [isLoading, setIsLoading] = useState(false);
+  const [customers, setCustomers] = useState([]);
+  const [customerSelected, setCustomerSelected] = useState();
+
+  useEffect(() => {
+    setIsLoading(true);
+    getAllCustomers().then((data) => {
+      setCustomers(data);
+      setIsLoading(false);
+    });
+  }, []);
 
   const handleClick = (record) => {
-    console.log(record);
     setCustomerSelected(record);
   };
 
@@ -43,7 +51,7 @@ function App() {
       {customerSelected ? (
         <Profile customer={customerSelected} handleReturn={handleReturn} />
       ) : (
-        <div className="table-comp">
+        <div className="table-component">
           <h2>Customers</h2>
           <TableComponent 
             columns={columns}

@@ -1,5 +1,12 @@
 # solstice-assessment
 
+# TODO
+
+1. Make profile sexier
+    1. the <div> with the reason for joining can get ugly
+    2. the split column format might be a bad idea since multiple lines in the reasoning for join text could make the two columns uneven heights
+2. Routing between pages would be better than the one 'Return to all Customers' button...
+
 ## Running the app locally
 
 In your CLI run:

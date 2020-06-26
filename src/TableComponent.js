@@ -21,7 +21,6 @@ function TableComponent(props) {
           }
         }
       })}
-      // pagination={false} 
       />
   )
 }
