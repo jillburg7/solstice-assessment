@@ -5,11 +5,16 @@
 ## Running the app locally
 
 1. Clone [solstice-assessment-api](https://github.com/jillburg7/solstice-assessment-api) and follow setup instructions before running this React app.
-2. Once the backend server is started, in another terminal window navigate to solstice-assessment directory and run:
-
-```
-yarn start
-```
+2. Once the backend server is running, in another terminal window navigate to the `solstice-assessment` directory. 
+3. Install dependencies locally by running:
+    ```
+    yarn
+    ```
+4. Once installed, run:
+    ```
+    yarn start
+    ```
+5. Navigate to [http://localhost:3000/](http://localhost:3000/)
 
 ## Assessment Directions
 Given this JSON file, you are asked to build a web app that should meet these requirements:
