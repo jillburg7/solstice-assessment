@@ -1,5 +1,7 @@
 # solstice-assessment
 
+> Note: this app is meant to run in parallel with [solstice-assessment-api](https://github.com/jillburg7/solstice-assessment-api)
+
 ## Running the app locally
 
 1. Clone [solstice-assessment-api](https://github.com/jillburg7/solstice-assessment-api) and follow setup instructions before running this React app.
