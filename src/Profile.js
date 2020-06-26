@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import TableComponent from "./TableComponent";
 import { getAccountsByCustomer } from "./service";
 
+import { PageHeader } from "antd";
+
 const columns = [
   {
     title: "Account ID",
     dataIndex: "id",
-  },
-  {
-    title: "Customer ID",
-    dataIndex: "customer_id",
   },
   {
     title: "Address",
@@ -39,6 +37,11 @@ const columns = [
     title: "Created Date",
     dataIndex: "created_date",
   },
+  {
+    title: "Customer ID",
+    dataIndex: "customer_id",
+    responsive: ['lg'],
+  },
 ];
 
 export const Profile = (props) => {
@@ -57,10 +60,11 @@ export const Profile = (props) => {
 
   return (
     <>
-      <div className="profile-header">
-        <button onClick={props.handleReturn}>Return to All Customers</button>
-        <h2>Profile</h2>
-      </div>
+      <PageHeader
+        onBack={props.handleReturn}
+        title="Profile"
+        subTitle={`${customer.first_name} ${customer.last_name}`}
+      />
       <div className="customer-details">
         <div>
           <div className="label">First Name</div>

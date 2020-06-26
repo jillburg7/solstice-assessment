@@ -2,25 +2,26 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { getAllCustomers } from "./service";
 
+import { PageHeader } from "antd";
 import TableComponent from "./TableComponent";
 import { Profile } from "./Profile";
 
 const columns = [
   {
-    title: 'id',
-    dataIndex: 'id',
+    title: "id",
+    dataIndex: "id",
   },
   {
-    title: 'First',
-    dataIndex: 'first_name',
+    title: "First",
+    dataIndex: "first_name",
   },
   {
-    title: 'Last',
-    dataIndex: 'last_name',
+    title: "Last",
+    dataIndex: "last_name",
   },
   {
-    title: 'Email',
-    dataIndex: 'email',
+    title: "Email",
+    dataIndex: "email",
   },
 ];
 
@@ -51,13 +52,17 @@ function App() {
       {customerSelected ? (
         <Profile customer={customerSelected} handleReturn={handleReturn} />
       ) : (
-        <div className="table-component">
-          <h2>Customers</h2>
-          <TableComponent 
-            columns={columns}
-            data={customers} 
-            onRowClicked={handleClick} />
-        </div>
+        <>
+          <PageHeader title="Solstice Assessment" />
+          <div className="table-component">
+            <h2>Customers</h2>
+            <TableComponent
+              columns={columns}
+              data={customers}
+              onRowClicked={handleClick}
+            />
+          </div>
+        </>
       )}
     </div>
   );

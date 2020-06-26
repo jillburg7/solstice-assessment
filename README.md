@@ -1,21 +1,15 @@
 # solstice-assessment
 
-# TODO
-
-1. Make profile sexier
-    1. the <div> with the reason for joining can get ugly
-    2. the split column format might be a bad idea since multiple lines in the reasoning for join text could make the two columns uneven heights
-2. Routing between pages would be better than the one 'Return to all Customers' button...
-
 ## Running the app locally
 
-In your CLI run:
+1. Clone [solstice-assessment-api](https://github.com/jillburg7/solstice-assessment-api) and follow setup instructions before running this React app.
+2. Once the backend server is started, in another terminal window navigate to solstice-assessment directory and run:
+
 ```
 yarn start
 ```
 
-
-## Directions
+## Assessment Directions
 Given this JSON file, you are asked to build a web app that should meet these requirements:
 - a backend api: preferably using Nodejs, but you can use any other backend language.
 - a client server: using React.
