@@ -14,14 +14,17 @@ const columns = [
   {
     title: "First",
     dataIndex: "first_name",
+    sorter: (a, b) => { return a.first_name.localeCompare(b.first_name)},
   },
   {
     title: "Last",
     dataIndex: "last_name",
+    sorter: (a, b) => { return a.last_name.localeCompare(b.last_name)},
   },
   {
     title: "Email",
     dataIndex: "email",
+    sorter: (a, b) => { return a.email.localeCompare(b.email)},
   },
 ];
 

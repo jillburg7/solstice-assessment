@@ -16,22 +16,27 @@ const columns = [
   {
     title: "City",
     dataIndex: "city",
+    sorter: (a, b) => { return a.city.localeCompare(b.city)},
   },
   {
     title: "State",
     dataIndex: "state",
+    sorter: (a, b) => { return a.state.localeCompare(b.state)},
   },
   {
     title: "Zip Code",
     dataIndex: "zip_code",
+    sorter: (a,b) => a.zip_code - b.zip_code,
   },
   {
     title: "Solar Farm ID",
     dataIndex: "solar_farm_id",
+    sorter: (a,b) => a.solar_farm_id - b.solar_farm_id,
   },
   {
     title: "Capacity Share",
     dataIndex: "capacity_share",
+    sorter: (a,b) => a.capacity_share - b.capacity_share,
   },
   {
     title: "Created Date",
